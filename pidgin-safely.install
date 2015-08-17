@@ -1,0 +1,10 @@
+post_install() {
+	echo "Setup the parent directory of your .purple in /etc/conf.d/pidgin-safely.conf"
+	gtk-update-icon-cache -q -t -f usr/share/icons/hicolor
+}
+post_upgrade() {
+	gtk-update-icon-cache -q -t -f usr/share/icons/hicolor
+}
+post_remove() {
+	gtk-update-icon-cache -q -t -f usr/share/icons/hicolor
+}
